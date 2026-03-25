@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokédex Simples</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Pokédex</h1>
+  </header>
+
+  <main>
+    <div class="filters">
+      <input 
+        type="search" 
+        id="pokemon-search" 
+        placeholder="Buscar Pokémon..." 
+        autocomplete="off"
+      >
+
+      <select id="type-filter">
+        <option value="">Todos os tipos</option>
+      </select>
+    </div>
+
+    <div id="pokemon-container" class="pokemon-grid"></div>
+
+    <div class="load-more-area">
+      <button id="load-more-btn">Carregar mais Pokémon</button>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
