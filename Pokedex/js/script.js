@@ -97,7 +97,7 @@ function renderizarPokemons() {
 
   container.innerHTML = pokemonsParaMostrar.map(p => `
     <div class="card">
-      <img src="${p.sprites.front_default || 'https://via.placeholder.com/220?text=?'}"
+      <img src="${p.sprites.front_default || 'https://placehold.co/220?text=?'}"
            alt="${p.name}" loading="lazy">
       <div class="card-content">
         <div class="number">#${p.id.toString().padStart(3, '0')}</div>
@@ -117,6 +117,6 @@ searchInput.addEventListener("input", renderizarPokemons);
 typeFilter.addEventListener("change", renderizarPokemons);
 loadMoreBtn.addEventListener("click", carregarPokemons);
 
-// Início
+
 carregarListaDeTipos();
 carregarPokemons();
