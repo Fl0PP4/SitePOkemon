@@ -9,7 +9,7 @@ const searchInput    = document.getElementById("pokemon-search");
 const typeFilter     = document.getElementById("type-filter");
 const loadMoreBtn    = document.getElementById("load-more-btn");
 
-// Carrega lista de tipos
+
 async function carregarListaDeTipos() {
   try {
     const res = await fetch("https://pokeapi.co/api/v2/type");
@@ -31,7 +31,7 @@ async function carregarListaDeTipos() {
   }
 }
 
-// Carrega pokémons
+
 async function carregarPokemons() {
   if (isLoading || !hasMore) return;
 
@@ -69,7 +69,7 @@ async function carregarPokemons() {
   }
 }
 
-// Renderiza cards com filtros
+
 function renderizarPokemons() {
   const termo = searchInput.value.toLowerCase().trim();
   const tipoSelecionado = typeFilter.value;
@@ -112,7 +112,7 @@ function renderizarPokemons() {
   `).join("");
 }
 
-// Eventos
+
 searchInput.addEventListener("input", renderizarPokemons);
 typeFilter.addEventListener("change", renderizarPokemons);
 loadMoreBtn.addEventListener("click", carregarPokemons);
